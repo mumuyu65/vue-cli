@@ -1,0 +1,12 @@
+<!--login.wxml-->
+<view class="container">
+  <view class="usermotto">
+    <label>用户名:</label><input type="text" placeholder="请输入用户名" class="loginuser"/>
+    </view>
+   <view class="usermotto">
+    <label>密码：</label><input type="password" placeholder="请输入密码" class="loginuser"/>
+   </view>
+    <view class="usermotto">
+      <button bindtap="bindViewTap">查看日志 </button>
+    </view>
+</view>
