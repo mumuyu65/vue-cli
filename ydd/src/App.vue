@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <component-a msgfromfather="love u"></component-a>
+    <!--<img src="./assets/logo.png">-->
+    <!--<component-a msgfromfather="love u"></component-a>-->
     <div class="content">
       <ul>
         <li><router-link to="/">首页</router-link></li>
