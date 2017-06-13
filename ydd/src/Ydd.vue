@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <ydd-header></ydd-header>
-    <div class="container">
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
     <ydd-footer></ydd-footer>
   </div>
 </template>

@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: 'todolist',
   data () {
     return {
       title: 'This is a todoList example!',

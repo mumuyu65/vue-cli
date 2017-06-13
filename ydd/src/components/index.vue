@@ -16,21 +16,5 @@ export default {
 </script>
 
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
 
-ul.index {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul.index li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
