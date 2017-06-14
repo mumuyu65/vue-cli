@@ -13,7 +13,7 @@ export default{
     //当`url`是相对地址的时候，设置`baseURL`会非常的方便
     baseURL: env.baseUrl,
     //`method`是请求资源的方式
-    method:'POST',
+    method:'GET',
     //`transformRequest`选项允许我们在请求发送到服务器之前对请求的数据做出一些改动
     //该选项只适用于以下请求方式：`put/post/patch`
     //数组里面的最后一个函数必须返回一个字符串、-一个`ArrayBuffer`或者`Stream`
