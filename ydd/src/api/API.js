@@ -6,19 +6,18 @@
 import axios from 'axios'
 import config from './config'
 
-// axios(config);
 class API {
-  getList (param) {
-    config.data.Method="get";
-    config.data.CustData.Data = param;
-    return axios.post('/Router',{},config);
+  login (param) {
+    console.log(param);
+    config.data.Method="post";
+    config.data= param;
+    return axios.post('/cctv/login',{},config);
   }
   getCurrency (param) {
-    console.log(config);
     var commonData = Object.create(config);
-
-    config.data.Method="get";
-    config.data.CustData.Data = param;
+    console.log(commonData);
+    config.Method="get";
+    config.data= param;
     return axios.post('/Router',{},config);
   }
 }

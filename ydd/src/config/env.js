@@ -10,11 +10,11 @@
  * baseImgPath: 图片存放地址
  *
  */
-let baseUrl = '';
+let baseUrl = 'https://api.yddtv.cn:9002';
 let routerMode = 'history';
 let baseImgPath = '';
 
-export {
+export default {
   baseUrl,
   routerMode,
   baseImgPath

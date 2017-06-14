@@ -34,14 +34,7 @@ export default{
 
     //`params`选项是要随请求一起发送的请求参数----一般链接在URL后面
     //他的类型必须是一个纯对象或者是URLSearchParams对象
-    params: {
-      eid:8484662,
-      openid:'57c80528e4b07e300ed4ffbb',
-      pubacckey:'',
-      timestamp:'',
-      nonce:'',
-      pubaccid:'',
-    },
+    params: {},
 
     //`paramsSerializer`是一个可选的函数，起作用是让参数（params）序列化
     paramsSerializer: function(params) {
@@ -54,20 +47,7 @@ export default{
     //string/plain/object/ArrayBuffer/ArrayBufferView/URLSearchParams
     //仅仅浏览器：FormData/File/Bold
     //仅node:Stream
-    data: {
-      EID:"8484662",
-      Method:"kis.APP003678.ueanalysis.UEStockAnalysis.",
-      NetID:"8484662159954",
-      CustData:{
-        "Result": "",
-        "ErrMsg": "",
-        "AccountDB": "",
-        "TotalPage": "",
-        "CurrentPage": "1",
-        "ItemsOfPage": "100",
-        "Data": {}
-      }
-    },
+    data: {},
 
     //`timeout`选项定义了请求发出的延迟毫秒数
     //如果请求花费的时间超过延迟的时间，那么请求会被终止
@@ -101,7 +81,8 @@ export default{
     validateStatus: function (status) {
       return status >= 200 && status < 300; // default
     },
-
-
+    //`cancelToken`定义了一个用于取消请求的cancel token
+    //详见cancelation部分
+  //`maxRedirects`定义了在nodejs中重定向的最大数量
     maxRedirects: 5, // default
 }
