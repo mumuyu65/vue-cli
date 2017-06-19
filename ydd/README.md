@@ -8,6 +8,10 @@
 # install 淘宝镜像
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 
+
+#install express
+npm install -g express
+
 # install dependencies
 npm install
 
