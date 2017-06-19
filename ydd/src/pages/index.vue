@@ -9,7 +9,6 @@
 </template>
 
 <script>
-//  import {Toast} from 'mint-ui'
 import API from '@/api/API'
 //实例化api
 const api = new API();
