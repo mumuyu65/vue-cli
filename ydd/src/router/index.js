@@ -6,6 +6,10 @@ import yddEconomics from '@/pages/yddEconomics'
 import yddMedia from '@/pages/yddMedia'
 import yddZhibo from '@/pages/yddZhibo'
 import softwareCenter from '@/pages/softwareCenter'
+import economicsZhibo from '@/pages/economicsZhibo'
+import economicsNews from '@/pages/economicsNews'
+import economicsCalendar from '@/pages/economicsCalendar'
+import economicsTeachers from '@/pages/economicsTeachers'
 
 Vue.use(Router)
 
@@ -19,7 +23,14 @@ export default new Router({
     {
       path: '/yddEconomics',
       name: 'yddEconomics',
-      component: yddEconomics
+      component: yddEconomics,
+      redirect: '/yddEconomics/economicsZhibo',
+      children: [
+        {path: '/yddEconomics/economicsZhibo', component: economicsZhibo},
+        {path: '/yddEconomics/economicsNews', component: economicsNews},
+        {path: '/yddEconomics/economicsCalendar', component: economicsCalendar},
+        {path: '/yddEconomics/economicsTeachers', component: economicsTeachers}
+      ]
     },
     {
       path: '/yddMedia',

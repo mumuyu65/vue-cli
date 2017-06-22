@@ -7,9 +7,15 @@ import axios from 'axios'
 import config from './config'
 
 class API {
-  login (param) {
-    config.data= param;
-    return axios.post('/cctv/login',{},config);
-  }
+    login(param) {
+        config.data = param;
+        return axios.post('/cctv/login', {}, config);
+    }
+
+    economicsZhibo(param) {
+        return axios.get('https://mt.china-vm.com:57077/query/newslist', {
+            params: param
+        }, config);
+    }
 }
 export default API;
