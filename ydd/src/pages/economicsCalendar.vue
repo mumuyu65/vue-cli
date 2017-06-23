@@ -1,6 +1,9 @@
 <template>
   <div class="caijing">
-    <div class="title">按时间查询</div>
+    <div class="title">
+        <div class="title-1"></div>
+        按时间查询
+    </div>
     <div class="t-select clearfix">
        <div class="week f-l clearfix">
           <dl class="cur">
@@ -33,6 +36,10 @@
          </dl>
          </div>
      </div>
+     <div class="title">
+        <div class="title-2"></div>
+            财经数据
+        </div>
   </div>
 </template>
 
@@ -56,14 +63,14 @@ export default {
     line-height: 22px;
 }
 
-.caijing .title:before {
-    float: left;
+.caijing .title-1{
     width: 22px;
+    display:inline-block;
     height: 22px;
     margin-right: 15px;
-    content: '';
     background: url(../../static/images/caijing/date.png) center center no-repeat;
     background-size: 22px;
+    vertical-align:top;
 }
 
 .caijing .week dl {
@@ -83,5 +90,15 @@ export default {
 .caijing .week dl dd {
     margin: 5px 0;
 }
+
+.caijing .title-2 {
+    width: 22px;
+    display:inline-block;
+    height: 22px;
+    margin-right: 15px;
+    background: url(../../static/images/caijing/time.png) center center no-repeat;
+    background-size: 22px;
+    vertical-align:top;
+    }
 
 </style>
