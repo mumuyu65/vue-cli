@@ -19,9 +19,9 @@ class API {
     }
 
     economicsNews(param) {
-      return axios.get('https://mt.china-vm.com:57077/query/newslist', {
-        params: param
-      }, config);
+        return axios.get('https://mt.china-vm.com:57077/query/newslist', {
+            params: param
+        }, config);
     }
 }
 export default API;
