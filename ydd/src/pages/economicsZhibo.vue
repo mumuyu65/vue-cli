@@ -4,22 +4,31 @@
       <i></i>
       <a href="javascript:;">快讯直播</a>
     </div>
-    <ul class="list-inline">
-        <li v-for="economic in economicsList" class="one-k">
-            <div class="left">
-               <a href="#">{{economic.CreateTime | timer}}</a>
-               <span></span>
-               <p class="shi">{{economic.CreateTime| dater}}</p>
-            </div>
-            <div class="right">
-              <p>{{economic.Context}}</p>
-            </div>
-        </li>
-    </ul>
+    <div class="row">
+      <div class="col-lg-9 col-md-9">
+          <ul class="list-inline">
+            <li v-for="economic in economicsList" class="one-k">
+                <div class="left">
+                   <a href="#">{{economic.CreateTime | timer}}</a>
+                   <span></span>
+                   <p class="shi">{{economic.CreateTime| dater}}</p>
+                </div>
+                <div class="right">
+                  <p>{{economic.Context}}</p>
+                </div>
+            </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <adv></adv>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Adv from '@/components/Adv.vue'
+
 import API from '@/api/API'
 //实例化api
 const api = new API();
@@ -31,6 +40,7 @@ export default {
       economicsList:[]
     }
   },
+  components: { Adv },
   mounted  () {
      this.initData();
   },
@@ -134,7 +144,7 @@ li.one-k .left p {
 
 li.one-k .right {
     float: left;
-    width: 800px;
+    width: 752px;
     border-left: 1px solid #ccc;
     padding-left: 26px;
     padding-bottom: 10px;

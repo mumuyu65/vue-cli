@@ -41,7 +41,7 @@ export default {
 
     .economics-header ul li::after{
       position: absolute;
-      right: 0;
+      right: 1px;
       content:'';
       width:1px;
       height:30%;

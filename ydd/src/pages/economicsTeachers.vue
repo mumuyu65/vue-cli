@@ -3,7 +3,7 @@
     <div class="row box xw">
          <div class="col-lg-3 h-img" v-for="teacher in economicsTeacher">
             <div class="img-T">
-                <a href=""><img v-bind:src="teacher.Url"/></a>
+                <a href=""><img :src="teacher.Url"/></a>
             </div>
             <h2>{{teacher.Title}}</h2>
             <div class="thime">

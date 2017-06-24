@@ -1,27 +1,33 @@
 <template>
   <div class="news">
-    <div class="row t-nav">
+    <div class="t-nav">
         <ul class="list-unstyled">
            <li class="t-1" v-for="menu in subMenu">
               <a @click="mainContent(menu.uid)">{{menu.title}}</a>
            </li>
         </ul>
     </div>
-    <div class="row box xw">
-        <div class="col-lg-3 h-img" v-for="content in newsContent">
-            <div class="img-T">
-                <a href=""><img v-bind:src="content.Url"/></a>
-            </div>
-            <h2>{{content.Title}}</h2>
-            <div class="thime">
-                <span class="time">{{content.CreateTime}}</span>
-            </div>
+    <div class="row box">
+      <div class="col-lg-9 col-md-9 box xw">
+        <div class="col-lg-4" v-for="content in newsContent">
+          <div class="img-T">
+              <a href=""><img v-bind:src="content.Url" class="h-img"/></a>
+          </div>
+          <h2>{{content.Title}}</h2>
+          <div class="thime">
+              <span class="time">{{content.CreateTime}}</span>
+          </div>
         </div>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <adv></adv>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Adv from '@/components/Adv.vue'
 import API from '@/api/API'
 //实例化api
 const api = new API();
@@ -36,6 +42,7 @@ export default {
       newsContent: []
     }
   },
+  components: { Adv },
   mounted  () {
      this.initData();
   },
@@ -88,7 +95,7 @@ export default {
 }
 
 .news .t-nav ul li {
-    float: left;
+    display:inline-block;
     height: 50px;
     line-height: 50px;
 }
@@ -105,19 +112,11 @@ export default {
 
 .news .box {
     margin-bottom: 15px;
+    margin-left:-30px;
 }
 
-.news .box .h-img {
-    margin-left: 30px;
-    width: 256px;
-    height: 240px;
-    overflow: hidden;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.news .box .h-img .img-T {
-    width: 230px;
+.news .box .img-T {
+    width: 100%;
     height: 155px;
     overflow: hidden;
     margin: 14px;
