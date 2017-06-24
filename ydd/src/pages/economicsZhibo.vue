@@ -7,11 +7,11 @@
     <ul class="list-inline">
         <li v-for="economic in economicsList" class="one-k">
             <div class="left">
-               <a href="#">23:04</a>
+               <a href="#">{{economic.CreateTime | timer}}</a>
                <span></span>
-               <p class="shi">06-22</p>
+               <p class="shi">{{economic.CreateTime| dater}}</p>
             </div>
-            <div class="right"> 
+            <div class="right">
               <p>{{economic.Context}}</p>
             </div>
         </li>
@@ -54,6 +54,14 @@ export default {
         });
     }
   },
+   filters: {
+      timer: function(value) {
+         return value.substring(11,16);
+        },
+      dater: function(value) {
+         return value.substring(5,10);
+        },
+    },
   computed:{
 
   }
